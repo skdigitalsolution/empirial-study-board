@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --color-brand-blue: #2868ef;
+  --color-brand-deep: #164bbd;
+  --color-brand-navy: #132342;
+  --color-brand-orange: #ff8a38;
+  --color-brand-pale: #f4f7fc;
+}

@@ -1,0 +1,24 @@
+import React from "react";
+
+export default function Brand() {
+  return (
+    <a
+      className="inline-flex items-center gap-[10px]"
+      href="#home"
+      aria-label="Empirial Study Board home"
+    >
+      <span
+        className="grid size-[35px] place-items-center rounded-full border border-current font-display text-[22px] font-bold max-[680px]:size-[31px] max-[680px]:text-[20px]"
+        aria-hidden="true"
+      >
+        E
+      </span>
+      <span className="font-display text-[15px] leading-[1.05] font-bold tracking-[-.4px] max-[680px]:text-[13px]">
+        empirial
+        <span className="mt-1 block font-sans text-[9px] font-medium tracking-[2.2px] uppercase">
+          study board
+        </span>
+      </span>
+    </a>
+  );
+}

@@ -45,10 +45,9 @@ export default function SiteHeader() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
           <img
-            src="/logo.svg"
+            src="logo images/imperier.png"
             alt="Logo"
             className="h-10 w-10 object-contain"
-            onError={(e) => (e.currentTarget.style.display = "none")}
           />
           <span className="font-bold text-blue-950">
             YOUR

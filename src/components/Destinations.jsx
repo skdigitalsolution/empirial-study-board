@@ -28,6 +28,7 @@ export default function Destinations() {
           <a
             className={`group relative min-w-0 overflow-hidden bg-[#dce3ec] text-white ${destination.featured ? "row-span-2 max-[680px]:col-span-2 max-[680px]:row-span-1" : ""}`}
             href="#contact"
+            id={`destination-${destination.country.toLowerCase().replace(/\s+/g, "-")}`}
             key={destination.country}
           >
             <img

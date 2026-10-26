@@ -1,15 +1,19 @@
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const menus = [
   {
     label: "Study Destinations",
     links: [
       ["Study in USA", "/study-destinations/usa"],
-      ["Study in UK", "/study-destinations/uk"],
       ["Study in Canada", "/study-destinations/canada"],
-      ["Study in Australia", "/study-destinations/australia"],
+      ["Study in United Kingdom", "/study-destinations/uk"],
       ["Study in Ireland", "/study-destinations/ireland"],
+      ["Study in Australia", "/study-destinations/australia"],
+      ["Study in New Zealand", "/study-destinations/new-zealand"],
+      ["Study in Europe", "/study-destinations/europe"],
+      ["Study in Asia", "/study-destinations/asia"],
     ],
   },
   {
@@ -36,26 +40,26 @@ export default function SiteHeader() {
   const [mobile, setMobile] = useState(false);
 
   const linkStyle =
-    "block rounded-lg px-3 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-orange-600";
+    "block rounded-lg px-4 py-3 ml-2 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-orange-600";
 
   return (
-    <header className="sticky top-0 z-50 bg-linear-to-r from-blue-500 to-sky-500 shadow-md">
+    <header className="sticky top-0 z-50 bg-slate-300 shadow-md">
       <nav className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-4">
 
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img
             src="logo images/imperier.png"
             alt="Logo"
-            className="h-10 w-10 object-contain"
+            className="h-15 w-15 rounded-full object-cover"
           />
-          <span className="font-bold text-blue-950">
-            YOUR
-            <span className="block text-xs tracking-widest text-orange-600">
-              OVERSEAS
+          <span className="font-bold text-blue-950 uppercase">
+            imperialstudy
+            <span className="block tracking-widest">
+              abroad
             </span>
           </span>
-        </a>
+        </Link>
 
         {/* Mobile menu button */}
         <button
@@ -76,47 +80,45 @@ export default function SiteHeader() {
         >
           <div className="flex flex-col lg:flex-row lg:items-center">
             {menus.map((menu) => (
-              <div key={menu.label} className="relative">
+              <div key={menu.label} className="relative cursor-pointer">
                 <div className="flex items-center">
-                  <a href={`/${menu.label.toLowerCase().replaceAll(" ", "-")}`} className={linkStyle}>
-                    {menu.label}
-                  </a>
-
-                  <button
-                    onClick={() =>
+                  <p className={linkStyle} onClick={() =>
                       setOpen(open === menu.label ? null : menu.label)
-                    }
-                    className="px-3 py-2 text-slate-700"
-                    aria-label={`Toggle ${menu.label}`}
-                    aria-expanded={open === menu.label}
-                  >
-                    {open === menu.label ? "▴" : "▾"}
-                  </button>
+                    }>
+                    {menu.label}
+                     {open === menu.label ? "▴" : "▾"}
+                  </p>
                 </div>
+
+                      {/* Here is study dropdown */}
 
                 {open === menu.label && (
                   <div className="ml-3 border-l-2 border-orange-400 pl-2 lg:absolute lg:left-0 lg:top-full lg:ml-0 lg:w-56 lg:rounded-lg lg:border-0 lg:bg-white lg:p-2 lg:pl-2 lg:shadow-xl">
                     {menu.links.map(([label, href]) => (
-                      <a key={href} href={href} className={linkStyle}>
+                      <Link
+                        key={label}
+                        to={href}
+                        onClick={() => {
+                          setOpen(null);
+                          setMobile(false);
+                        }}
+                        className={linkStyle}
+                      >
                         {label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-
-            <a href="/upcoming-events" className={linkStyle}>
-              Upcoming Events
-            </a>
             <a href="/contact" className={linkStyle}>
               Contact Us
             </a>
           </div>
 
           {/* Buttons student Login */}
-          <div className="flex flex-col gap-2 border-t border-slate-500 pt-3 lg:ml-3 lg:flex-row lg:border-0 lg:pt-0">
-            <a href="/student-login" className={linkStyle}>
+          <div className="flex flex-col gap-2 pt-3 lg:ml-3 lg:flex-row lg:border-0 lg:pt-0">
+            <a href="/student-login"   className="rounded-lg bg-blue-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-blue-600">
               Student Login
             </a>
             <a

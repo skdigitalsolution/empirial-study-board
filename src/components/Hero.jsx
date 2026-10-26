@@ -3,7 +3,7 @@ import React from "react";
 export default function Hero() {
   return (
     <section
-      className="relative grid min-h-[650px] grid-cols-2 items-center overflow-hidden bg-brand-blue px-[7.2%] pt-[150px] pb-[106px] text-white min-[1500px]:px-[max(7.2%,calc((100vw-1380px)/2))] max-[900px]:min-h-[600px] max-[900px]:px-[5%] max-[680px]:min-h-0 max-[680px]:flex max-[680px]:flex-col max-[680px]:items-stretch max-[680px]:px-[23px] max-[680px]:pt-[105px] max-[680px]:pb-[78px]"
+      className="relative grid min-h-[650px] grid-cols-2 items-center overflow-hidden bg-brand-blue px-[7.2%] pb-[106px] text-white min-[1500px]:px-[max(7.2%,calc((100vw-1380px)/2))] max-[900px]:min-h-[600px] max-[900px]:px-[5%] max-[680px]:min-h-0 max-[680px]:flex max-[680px]:flex-col max-[680px]:items-stretch max-[680px]:px-[23px] max-[680px]:pt-[105px] max-[680px]:pb-[78px]"
       id="home"
     >
       <div className="pointer-events-none absolute -top-[440px] -right-[265px] size-[700px] rounded-full border border-white/10 max-[680px]:-right-[450px]" />
@@ -23,13 +23,10 @@ export default function Hero() {
         </p>
         <div className="flex items-center gap-[25px] max-[680px]:gap-[17px]">
           <a
-            className="inline-flex min-h-12 items-center justify-center gap-6 rounded-[3px] bg-white px-5 text-[12px] font-bold text-brand-deep transition-transform hover:-translate-y-0.5 max-[680px]:min-h-11 max-[680px]:gap-[14px] max-[680px]:px-[14px] max-[680px]:text-[10px]"
+            className="inline-flex min-h-12 items-center justify-center gap-6 rounded-[3px] bg-white   px-5 text-[12px] font-bold text-brand-deep transition-transform hover:-translate-y-0.5 max-[680px]:min-h-11 max-[680px]:gap-[14px] max-[680px]:px-[14px] max-[680px]:text-[10px]"
             href="#contact"
           >
             Start your journey <span className="text-[17px]" aria-hidden="true">→</span>
-          </a>
-          <a className="text-[11px] font-semibold max-[680px]:text-[9px]" href="#destinations">
-            Explore destinations <span className="ml-2" aria-hidden="true">↓</span>
           </a>
         </div>
         <div className="mt-[46px] flex items-center gap-3 max-[680px]:mt-[23px]">

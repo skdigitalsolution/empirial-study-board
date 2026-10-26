@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { destinations } from "../data/studyAbroad.js";
 
 export default function Destinations() {
@@ -25,9 +26,9 @@ export default function Destinations() {
       </div>
       <div className="grid grid-cols-[1.25fr_1fr_1fr] grid-rows-[225px_225px] gap-[14px] max-[900px]:grid-rows-[190px_190px] max-[680px]:grid-cols-2 max-[680px]:grid-rows-[230px_170px_170px] max-[680px]:gap-[9px]">
         {destinations.map((destination, index) => (
-          <a
+          <Link
             className={`group relative min-w-0 overflow-hidden bg-[#dce3ec] text-white ${destination.featured ? "row-span-2 max-[680px]:col-span-2 max-[680px]:row-span-1" : ""}`}
-            href="#contact"
+            to={`/study-destinations/${destination.slug}`}
             id={`destination-${destination.country.toLowerCase().replace(/\s+/g, "-")}`}
             key={destination.country}
           >
@@ -47,7 +48,7 @@ export default function Destinations() {
               </strong>
               <span className="text-[9px] opacity-[.78] max-[680px]:text-[8px]">Discover more ↗</span>
             </span>
-          </a>
+          </Link>
         ))}
       </div>
       <a className="mt-[26px] table mx-auto text-[11px] font-bold text-brand-blue max-[680px]:mt-[21px]" href="#contact">

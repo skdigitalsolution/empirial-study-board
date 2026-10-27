@@ -5,7 +5,6 @@ import Contact from "../components/Contact.jsx";
 import Destinations from "../components/Destinations.jsx";
 import Hero from "../components/Hero.jsx";
 import Journey from "../components/Journey.jsx";
-import KCServicesAndOfferings from "../components/KCServicesAndOfferings.jsx";
 import OurCoreStrengths from "../components/OurCoreStrengths.jsx";
 import TrustStrip from "../components/TrustStrip.jsx";
 import StudyInAsia from "../studyPage/StudyInAsia.jsx";
@@ -16,7 +15,7 @@ import StudyInIreland from "../studyPage/StudyInIreland.jsx";
 import StudyInNewZealand from "../studyPage/StudyInNewZealand.jsx";
 import StudyInUSA from "../studyPage/StudyInUSA.jsx";
 import StudyInUnitedKingdom from "../studyPage/StudyInUnitedKingdom.jsx";
-import Temp from "../components/Temp.jsx";
+import StudentsPartnersSection from "../components/StudentsPartnersSection.jsx";
 
 function HomePage() {
   return (
@@ -24,7 +23,7 @@ function HomePage() {
       <Hero />
       <TrustStrip />
       <OurCoreStrengths />
-      <KCServicesAndOfferings />
+      <StudentsPartnersSection />
       <Destinations />
       <Journey />
       <About />

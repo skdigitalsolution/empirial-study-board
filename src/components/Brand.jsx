@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Brand() {
   return (
-    <a
+    <Link
       className="inline-flex items-center gap-[10px]"
-      href="#home"
+      to="#home"
       aria-label="Empirial Study Board home"
     >
       <span
@@ -19,6 +20,6 @@ export default function Brand() {
           study board
         </span>
       </span>
-    </a>
+    </Link>
   );
 }

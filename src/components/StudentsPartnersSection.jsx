@@ -123,13 +123,13 @@
 //         ))}
 //       </ul>
 
-//       <a
-//         href={href}
+//       <Link
+//         to={href}
 //         className="group mt-8 inline-flex items-center gap-2 rounded text-[15px] font-medium text-[#F26B4E] transition-colors hover:text-[#d9502f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F26B4E] focus-visible:ring-offset-2"
 //       >
 //         See More
 //         <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-//       </a>
+//       </Link>
 //     </div>
 //   );
 // }
@@ -221,6 +221,7 @@ import {
   FaUsers, FaMapMarkerAlt, FaTrophy, FaGlobeAmericas,
 } from "react-icons/fa";
 import { BsChatSquareDotsFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export default function StudentsPartnersSection() {
   return (
@@ -260,9 +261,9 @@ export default function StudentsPartnersSection() {
               </li>
             </ul>
 
-            <a href="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
+            <Link to="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
               See More <FaChevronRight className="text-xs" />
-            </a>
+            </Link>
           </div>
 
           {/* Right: image + circle */}
@@ -343,9 +344,9 @@ export default function StudentsPartnersSection() {
               </li>
             </ul>
 
-            <a href="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
+            <Link to="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
               See More <FaChevronRight className="text-xs" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -386,9 +387,9 @@ export default function StudentsPartnersSection() {
               </li>
             </ul>
 
-            <a href="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
+            <Link to="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
               See More <FaChevronRight className="text-xs" />
-            </a>
+            </Link>
           </div>
 
           {/* Right: image + circle */}
@@ -467,9 +468,9 @@ export default function StudentsPartnersSection() {
               </li>
             </ul>
 
-            <a href="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
+            <Link to="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
               See More <FaChevronRight className="text-xs" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

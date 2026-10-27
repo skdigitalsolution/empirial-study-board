@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const strengths = [
   {
@@ -78,9 +79,9 @@ export default function OurCoreStrengths() {
               <p className="mb-5 max-w-[290px] text-[11px] leading-[1.8] text-[#707a8c]">
                 {strength.description}
               </p>
-              <a
+              <Link
                 className="inline-flex items-center gap-2 border-b border-[#c9d6ec] pb-1 text-[10px] font-bold text-brand-deep transition-colors hover:border-brand-orange hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"
-                href={strength.href}
+                to={strength.href}
                 target={strength.external ? "_blank" : undefined}
                 rel={strength.external ? "noreferrer" : undefined}
               >
@@ -88,7 +89,7 @@ export default function OurCoreStrengths() {
                 <span className="text-[13px]" aria-hidden="true">
                   ↗
                 </span>
-              </a>
+              </Link>
             </article>
           ))}
         </div>

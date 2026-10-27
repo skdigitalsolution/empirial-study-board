@@ -111,22 +111,22 @@
 //                 )}
 //               </div>
 //             ))}
-//             <a href="/contact" className={linkStyle}>
+//             <Link to="/contact" className={linkStyle}>
 //               Contact Us
-//             </a>
+//             </Link>
 //           </div>
 
 //           {/* Buttons student Login */}
 //           <div className="flex flex-col gap-2 pt-3 lg:ml-3 lg:flex-row lg:border-0 lg:pt-0">
-//             <a href="/student-login"   className="rounded-lg bg-blue-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-blue-600">
+//             <Link to="/student-login"   className="rounded-lg bg-blue-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-blue-600">
 //               Student Login
-//             </a>
-//             <a
-//               href="/book-counselling"
+//             </Link>
+//             <Link
+//               to="/book-counselling"
 //               className="rounded-lg bg-orange-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-orange-600"
 //             >
 //               Book Online Counselling ↗
-//             </a>
+//             </Link>
 //           </div>
 //         </div>
 //       </nav>
@@ -196,7 +196,7 @@ export default function SiteHeader() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="logo images/imperier.png"
+            src={`${import.meta.env.BASE_URL}logo images/imperier.png`}
             alt="Logo"
             className="h-15 w-15 rounded-full object-cover"
           />
@@ -272,22 +272,22 @@ export default function SiteHeader() {
                 )}
               </div>
             ))}
-            <a href="/contact" className={`${linkStyle} block`}>
+            <Link to="/contact-us/" className={`${linkStyle} block`}>
               Contact Us
-            </a>
+            </Link>
           </div>
 
           {/* Buttons student Login */}
           <div className="flex flex-col gap-2 pt-3 lg:ml-3 lg:flex-row lg:border-0 lg:pt-0">
-            <a href="/student-login" className="rounded-lg bg-blue-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-blue-600">
+            <Link to="/student-login" className="rounded-lg bg-blue-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-blue-600">
               Student Login
-            </a>
-            <a
-              href="/book-counselling"
+            </Link>
+            <Link
+              to="/book-counselling"
               className="rounded-lg bg-orange-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-orange-600"
             >
               Book Online Counselling ↗
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

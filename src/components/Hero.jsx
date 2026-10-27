@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -27,12 +28,12 @@ export default function Hero() {
           studying abroad your reality.
         </p>
         <div className="hero-reveal [animation-delay:360ms] flex items-center gap-[25px] max-[680px]:gap-[17px]">
-          <a
+          <Link
             className="inline-flex min-h-12 items-center justify-center gap-6 rounded-[3px] bg-white px-5 text-[12px] font-bold text-brand-deep shadow-[0_8px_28px_#09172e55] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_32px_#09172e66] max-[680px]:min-h-11 max-[680px]:gap-[14px] max-[680px]:px-[14px] max-[680px]:text-[10px]"
-            href="#contact"
+            to="#contact"
           >
             Start your journey <span className="text-[17px]" aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
         <div className="hero-reveal [animation-delay:480ms] mt-[46px] flex items-center gap-3 max-[680px]:mt-[23px]">
           <div className="flex pl-1" aria-hidden="true">

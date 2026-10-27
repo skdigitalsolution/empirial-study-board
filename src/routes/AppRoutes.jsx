@@ -16,6 +16,8 @@ import StudyInNewZealand from "../studyPage/StudyInNewZealand.jsx";
 import StudyInUSA from "../studyPage/StudyInUSA.jsx";
 import StudyInUnitedKingdom from "../studyPage/StudyInUnitedKingdom.jsx";
 import StudentsPartnersSection from "../components/StudentsPartnersSection.jsx";
+import ContactUs from "../pages/ContactUs.jsx";
+import AboutUs from "../pages/AboutUs.jsx";
 
 function HomePage() {
   return (
@@ -44,6 +46,8 @@ export default function AppRoutes() {
       <Route path="/study-destinations/new-zealand" element={<StudyInNewZealand />} />
       <Route path="/study-destinations/europe" element={<StudyInEurope />} />
       <Route path="/study-destinations/asia" element={<StudyInAsia />} />
+      <Route path="/contact-us" element={<ContactUs/>} />
+      <Route path="/company/about" element={<AboutUs/>} />
       <Route path="*" element={<HomePage />} />
     </Routes>
   );

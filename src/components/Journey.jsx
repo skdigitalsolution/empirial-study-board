@@ -1,5 +1,6 @@
 import React from "react";
 import { journeySteps } from "../data/studyAbroad.js";
+import { Link } from "react-router-dom";
 
 export default function Journey() {
   return (
@@ -43,9 +44,9 @@ export default function Journey() {
             </li>
           ))}
         </ol>
-        <a className="inline-flex min-h-12 items-center justify-center gap-6 rounded-[3px] bg-brand-blue px-5 text-[12px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-brand-deep max-[680px]:min-h-11 max-[680px]:gap-[14px] max-[680px]:px-[14px] max-[680px]:text-[10px]" href="#contact">
+        <Link className="inline-flex min-h-12 items-center justify-center gap-6 rounded-[3px] bg-brand-blue px-5 text-[12px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-brand-deep max-[680px]:min-h-11 max-[680px]:gap-[14px] max-[680px]:px-[14px] max-[680px]:text-[10px]" to="#contact">
           Let’s make a plan <span className="text-[17px]" aria-hidden="true">→</span>
-        </a>
+        </Link>
       </div>
     </section>
   );

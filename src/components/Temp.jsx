@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const destinations = [
   "United States",
@@ -35,7 +36,7 @@ export default function Temp() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white">
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 lg:px-12">
-          <a href="#home" aria-label="KC Overseas home">
+          <Link to="#home" aria-label="KC Overseas home">
             <div className="leading-none">
               <span className="text-2xl font-black tracking-tight text-[#143a72]">
                 KC
@@ -47,33 +48,33 @@ export default function Temp() {
                 EDUCATION
               </p>
             </div>
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-7 text-sm font-medium text-[#343434] lg:flex">
-            <a href="#destinations" className="hover:text-orange-500">
+            <Link to="#destinations" className="hover:text-orange-500">
               Study Destinations
-            </a>
-            <a href="#services" className="hover:text-orange-500">
+            </Link>
+            <Link to="#services" className="hover:text-orange-500">
               Services
-            </a>
-            <a href="#contact" className="hover:text-orange-500">
+            </Link>
+            <Link to="#contact" className="hover:text-orange-500">
               Contact Us
-            </a>
-            <a href="#company" className="hover:text-orange-500">
+            </Link>
+            <Link to="#company" className="hover:text-orange-500">
               Company
-            </a>
-            <a
-              href="https://www.coursefinder.ai/"
+            </Link>
+            <Link
+              to="https://www.coursefinder.ai/"
               className="hover:text-orange-500"
             >
               For Partners
-            </a>
-            <a
-              href="https://www.studies-overseas.com/"
+            </Link>
+            <Link
+              to="https://www.studies-overseas.com/"
               className="rounded bg-[#ed7d24] px-5 py-3 font-bold text-white transition hover:bg-[#d96814]"
             >
               Book Online Counselling
-            </a>
+            </Link>
           </nav>
 
           <button
@@ -93,14 +94,14 @@ export default function Temp() {
               ["Company", "company"],
               ["Contact Us", "contact"],
             ].map(([label, id]) => (
-              <a
+              <Link
                 key={id}
-                href={`#${id}`}
+                to={`#${id}`}
                 onClick={() => setMenuOpen(false)}
                 className="block rounded px-3 py-3 text-sm hover:bg-orange-50"
               >
                 {label}
-              </a>
+              </Link>
             ))}
           </nav>
         )}
@@ -137,12 +138,12 @@ export default function Temp() {
             recruitment partners choose the best global universities.
           </p>
 
-          <a
-            href="#services"
+          <Link
+            to="#services"
             className="mt-8 inline-flex items-center gap-3 bg-[#ef7d22] px-8 py-4 text-sm font-bold text-white transition hover:bg-[#d96814]"
           >
             Start Your Journey <span>→</span>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -212,9 +213,9 @@ export default function Temp() {
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {destinations.map((country, index) => (
-              <a
+              <Link
                 key={country}
-                href="https://www.studies-overseas.com/"
+                to="https://www.studies-overseas.com/"
                 className="group flex min-h-36 items-end justify-between border border-gray-200 bg-white p-5 transition hover:border-[#ed7d24] hover:shadow-lg sm:min-h-44 sm:p-7"
               >
                 <div>
@@ -228,7 +229,7 @@ export default function Temp() {
                     Explore →
                   </span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -254,8 +255,8 @@ export default function Temp() {
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {studentServices.map((service, index) => (
-              <a
-                href="https://www.studies-overseas.com/"
+              <Link
+                to="https://www.studies-overseas.com/"
                 key={service}
                 className="flex items-center gap-4 border border-gray-200 p-5 transition hover:border-[#ed7d24] hover:shadow-md"
               >
@@ -266,7 +267,7 @@ export default function Temp() {
                   {service}
                 </span>
                 <span className="ml-auto text-[#ed7d24]">↗</span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -361,12 +362,12 @@ export default function Temp() {
               and global universities through our online platform,
               coursefinder.ai.
             </p>
-            <a
-              href="https://www.studies-overseas.com/"
+            <Link
+              to="https://www.studies-overseas.com/"
               className="mt-5 inline-block text-sm font-bold text-[#ed7d24]"
             >
               Know More →
-            </a>
+            </Link>
           </div>
 
           <div>
@@ -382,13 +383,13 @@ export default function Temp() {
                 "Blog",
                 "Contact Us",
               ].map((link) => (
-                <a
+                <Link
                   key={link}
-                  href="https://www.studies-overseas.com/"
+                  to="https://www.studies-overseas.com/"
                   className="hover:text-[#ed7d24]"
                 >
                   {link} ↗
-                </a>
+                </Link>
               ))}
             </div>
           </div>

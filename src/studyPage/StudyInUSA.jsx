@@ -1,6 +1,6 @@
 import React from "react";
-import { studyDestinationLinks } from "./studyDestinationLinks.js";
 import { Link } from "react-router-dom";
+import StudyDestinationHero from "./StudyDestinationHero.jsx";
 
 const destination = {
   slug: "usa",
@@ -26,16 +26,7 @@ export default function StudyInUSA() {
   const sections = [["Why study here", "why-study"], ["Courses", "courses"], ["Costs & intakes", "planning"], ["Admissions", "admissions"], ["Visa", "visa"], ["Careers & cities", "careers"], ["FAQs", "faqs"]];
   return (
     <main>
-      <section className="relative overflow-hidden bg-brand-navy px-6 py-20 text-white sm:px-10 lg:px-[9%] lg:py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_15%,rgba(40,104,239,.5),transparent_42%)]" />
-        <div className="relative mx-auto max-w-7xl">
-          <p className="mb-5 text-xs font-bold tracking-[.2em] text-blue-200 uppercase">Study destination guide · {destination.region}</p>
-          <h1 className="max-w-3xl font-display text-5xl leading-tight font-extrabold sm:text-6xl">{destination.heading}</h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-blue-100 sm:text-lg">{destination.intro}</p>
-          <Link to={`${import.meta.env.BASE_URL}#contact`} className="mt-8 inline-flex rounded-lg bg-brand-orange px-6 py-3 text-sm font-bold text-white">Talk to an adviser ↗</Link>
-          <div className="mt-8 flex flex-wrap gap-2">{studyDestinationLinks.map((item) => <Link key={item.slug} to={`${import.meta.env.BASE_URL}study-destinations/${item.slug}`} className={`rounded-full border px-4 py-2 text-xs font-semibold ${item.slug === destination.slug ? "border-orange-300 bg-orange-300 text-brand-navy" : "border-white/30 text-white"}`}>{item.country}</Link>)}</div>
-        </div>
-      </section>
+      <StudyDestinationHero destination={destination} />
       <nav aria-label="USA page sections" className="sticky top-20 z-40 overflow-x-auto border-b bg-white px-5 py-4"><div className="mx-auto flex max-w-7xl gap-3 whitespace-nowrap">{sections.map(([label, id]) => <Link key={id} to={`#${id}`} className="rounded-full bg-slate-100 px-4 py-2 text-xs font-semibold">{label}</Link>)}</div></nav>
       <section id="why-study" className="scroll-mt-40 px-6 py-16 sm:px-10 lg:px-[9%]"><div className="mx-auto max-w-7xl"><p className="text-xs font-bold tracking-widest text-brand-blue uppercase">Your next chapter</p><h2 className="mt-3 font-display text-4xl font-bold">Why study in the USA?</h2><p className="mt-5 max-w-4xl text-sm leading-7 text-slate-600">{destination.overview}</p><div className="mt-7 grid gap-4 sm:grid-cols-3">{["Flexible course choices", "Research and practical learning", "Diverse campus communities"].map((item) => <article key={item} className="rounded-xl border p-5 font-semibold">{item}<p className="mt-2 text-sm font-normal leading-6 text-slate-600">Compare each institution and program to see how it supports your academic goals.</p></article>)}</div></div></section>
       <section id="courses" className="scroll-mt-40 bg-brand-pale px-6 py-16 sm:px-10 lg:px-[9%]"><div className="mx-auto max-w-7xl"><p className="text-xs font-bold tracking-widest text-brand-blue uppercase">Find your direction</p><h2 className="mt-3 font-display text-4xl font-bold">Courses & universities</h2><p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600">Explore program options and compare curriculum, accreditation, location, student support, and total cost.</p><div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{destination.fields.map((field) => <article key={field} className="rounded-xl bg-white p-5 text-sm font-bold shadow-sm">↗ {field}</article>)}</div><p className="mt-6 text-sm leading-7 text-slate-600">Build a balanced university shortlist based on entry requirements, teaching style, research or internship opportunities, campus location, and your budget.</p></div></section>

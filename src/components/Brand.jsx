@@ -5,7 +5,7 @@ export default function Brand() {
   return (
     <Link
       className="inline-flex items-center gap-[10px]"
-      to="#home"
+      to="/#home"
       aria-label="Empirial Study Abroad home"
     >
       <span

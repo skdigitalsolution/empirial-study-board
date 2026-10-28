@@ -50,15 +50,17 @@ export default function SiteFooter() {
         <div className="mb-9 flex flex-wrap items-center justify-between gap-6 border-b border-white/15 pb-8 lg:mb-10 lg:pb-9">
           <div className="flex min-w-0 flex-wrap items-center gap-6">
             <img
-              src={`${import.meta.env.BASE_URL}footerImage.png`}
+              src={`${import.meta.env.BASE_URL}logo images/imperier.png`}
               alt="Empirial Study Abroad"
-              className="h-auto w-[190px] max-w-full sm:w-[220px]"
+              className="h-24 w-24 shrink-0 object-contain sm:h-28 sm:w-28"
             />
             <div className="max-w-[290px]">
-              <p className="mb-1 text-sm font-bold tracking-wide text-white">
-                Your next chapter starts here.
+              <p className="mb-1 text-sm font-bold tracking-wide text-white uppercase">
+                Empirial
+                <span className="block tracking-widest">Study Abroad</span>
               </p>
               <p className="m-0 text-xs leading-6 text-[#aab7d0]">
+                Your next chapter starts here.
                 Helping you find your way to a world of possibility.
               </p>
             </div>
@@ -91,16 +93,9 @@ export default function SiteFooter() {
                       className="group inline-flex min-h-5 items-center gap-2 text-xs text-[#aab7d0] transition-colors hover:text-[#f3c987]"
                       to={path}
                     >
-                      {flag === "asia" ? (
+                      {flag ? (
                         <img
-                          src="https://assets.studies-overseas.com/Group_1_867b98a2d8.svg"
-                          alt=""
-                          className="h-3.5 w-5 shrink-0 rounded-[2px] object-cover"
-                          loading="lazy"
-                        />
-                      ) : flag ? (
-                        <img
-                          src={`https://flagcdn.com/w40/${flag}.png`}
+                          src={`${import.meta.env.BASE_URL}flags/${flag === "asia" ? "asia.svg" : `${flag}.png`}`}
                           alt=""
                           className="h-3.5 w-5 shrink-0 rounded-[2px] object-cover"
                           loading="lazy"
@@ -127,7 +122,7 @@ export default function SiteFooter() {
           <span className="max-[600px]:order-3 max-[600px]:w-full">
             Made for your next chapter.
           </span>
-          <Link className="transition-colors hover:text-white" to="#home">
+          <Link className="transition-colors hover:text-white" to="/#home">
             Back to top ↑
           </Link>
         </div>

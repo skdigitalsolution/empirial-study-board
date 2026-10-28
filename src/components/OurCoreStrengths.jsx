@@ -3,34 +3,31 @@ import { Link } from "react-router-dom";
 
 const strengths = [
   {
-    value: "1,200+",
-    category: "GLOBAL UNIVERSITY NETWORK",
-    title: "Global University Tie Ups",
+    value: "08",
+    category: "STUDY DESTINATIONS",
+    title: "Explore the world",
     description:
-      "Our students aren’t just pursuing their higher education, but their dreams and ambitions in eminent universities across the globe.",
-    href: "https://www.studies-overseas.com/universities",
-    linkLabel: "Explore our universities",
-    external: true,
+      "Compare study options across eight destinations and find one that fits your goals.",
+    href: "/#destinations",
+    linkLabel: "Explore destinations",
   },
   {
-    value: "55+",
-    category: "GLOBAL PRESENCE",
-    title: "Offices across the Globe",
+    value: "1:1",
+    category: "PERSONAL GUIDANCE",
+    title: "Advice shaped around you",
     description:
-      "We’re growing, we’re expanding and we’re doing that fast! Join the fastest growing EdTech brand in South and South-East Asia.",
-    href: "https://www.studies-overseas.com/contact-us",
-    linkLabel: "Find our offices",
-    external: true,
+      "Get support tailored to your study plans, questions, and preferred destination.",
+    href: "/services/counselling",
+    linkLabel: "Explore counselling",
   },
   {
-    value: "28+",
-    category: "INDUSTRY EXPERTISE",
-    title: "Years of Industry Presence",
+    value: "360°",
+    category: "END-TO-END SUPPORT",
+    title: "Help at every step",
     description:
-      "With over two decades of industry expertise, we know what’s best for you and that makes us really good at what we do!",
-    href: "https://www.studies-overseas.com/aboutus",
-    linkLabel: "About us",
-    external: true,
+      "From choosing a course to preparing applications and visas, find guidance for your journey.",
+    href: "/company/about",
+    linkLabel: "About Empirial",
   },
 ];
 
@@ -82,8 +79,6 @@ export default function OurCoreStrengths() {
               <Link
                 className="inline-flex items-center gap-2 border-b border-[#c9d6ec] pb-1 text-[10px] font-bold text-brand-deep transition-colors hover:border-brand-orange hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"
                 to={strength.href}
-                target={strength.external ? "_blank" : undefined}
-                rel={strength.external ? "noreferrer" : undefined}
               >
                 {strength.linkLabel}
                 <span className="text-[13px]" aria-hidden="true">

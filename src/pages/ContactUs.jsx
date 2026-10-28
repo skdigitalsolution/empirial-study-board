@@ -5,11 +5,6 @@ import { FiPhone, FiChevronDown } from "react-icons/fi";
 import { MdVerticalAlignTop } from "react-icons/md";
 import {
   FaPaperPlane,
-  FaTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-  FaLinkedinIn,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import PageFooter from "../components/PageFooter";
@@ -35,20 +30,6 @@ const specializations = [
   "Operation Management",
   "Aviation & Tourism Management",
   "Hotel & Event Management",
-];
-
-const socials = [
-  { icon: FaTwitter, link: "https://twitter.com/iiam_college" },
-  {
-    icon: FaFacebookF,
-    link: "https://www.facebook.com/pages/category/Tutor-Teacher/Indian-Institute-of-Aviation-and-Management-2201949220074162/",
-  },
-  { icon: FaInstagram, link: "https://www.instagram.com/iiamcollege/" },
-  {
-    icon: FaYoutube,
-    link: "https://www.youtube.com/channel/UCJw44R0lnLylCb9naNAsW3g",
-  },
-  { icon: FaLinkedinIn, link: "#" },
 ];
 
 const MAP_LINK = "https://goo.gl/maps/DFMJp93L47G2";
@@ -251,7 +232,7 @@ export default function ContactUs() {
                 <SlEnvolope className="mt-1 h-7 w-7 shrink-0 text-gray-500" />
                 <div>
                   <p className="font-['Josefin_Sans'] text-[15px] font-semibold text-gray-900">
-                    admin@iiamedu.com
+                    Please use the enquiry form to contact our team.
                   </p>
                   <p className="text-[15px] text-gray-500">
                     Send us your query anytime!

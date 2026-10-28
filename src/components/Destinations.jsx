@@ -19,7 +19,7 @@ export default function Destinations() {
             From iconic cities to close-knit campuses, discover a destination
             that feels like the start of something.
           </p>
-          <Link className="border-b border-[#c8d1e1] pb-[6px] text-[10px] font-bold" to="#contact">
+          <Link className="border-b border-[#c8d1e1] pb-[6px] text-[10px] font-bold" to="/#contact">
             Get help choosing <span className="ml-[10px] text-brand-blue" aria-hidden="true">↗</span>
           </Link>
         </div>
@@ -27,7 +27,8 @@ export default function Destinations() {
       <div className="grid grid-cols-[1.25fr_1fr_1fr] grid-rows-[225px_225px] gap-[14px] max-[900px]:grid-rows-[190px_190px] max-[680px]:grid-cols-2 max-[680px]:grid-rows-[230px_170px_170px] max-[680px]:gap-[9px]">
         {destinations.map((destination, index) => (
           <Link
-            className={`group relative min-w-0 overflow-hidden bg-[#dce3ec] text-white ${destination.featured ? "row-span-2 max-[680px]:col-span-2 max-[680px]:row-span-1" : ""}`}
+            className={`zigzag-float group relative min-w-0 overflow-hidden bg-[#dce3ec] text-white ${destination.featured ? "row-span-2 max-[680px]:col-span-2 max-[680px]:row-span-1" : ""}`}
+            style={{ animationDelay: `${index * 180}ms` }}
             to={`/study-destinations/${destination.slug}`}
             id={`destination-${destination.country.toLowerCase().replace(/\s+/g, "-")}`}
             key={destination.country}
@@ -51,7 +52,7 @@ export default function Destinations() {
           </Link>
         ))}
       </div>
-      <Link className="mt-[26px] table mx-auto text-[11px] font-bold text-brand-blue max-[680px]:mt-[21px]" to="#contact">
+      <Link className="mt-[26px] table mx-auto text-[11px] font-bold text-brand-blue max-[680px]:mt-[21px]" to="/#destinations">
         See all destinations <span className="ml-3 text-base" aria-hidden="true">→</span>
       </Link>
     </section>

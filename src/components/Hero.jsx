@@ -8,7 +8,10 @@ export default function Hero() {
       id="home"
     >
       <div
-        className="absolute inset-0 -z-10 scale-105 bg-[url('/bcgImage.jpg')] bg-cover bg-center blur-[2px]"
+        className="absolute inset-0 -z-10 scale-105 bg-cover bg-center blur-[2px]"
+        style={{
+          backgroundImage: `url("${import.meta.env.BASE_URL}bcgImage.jpg")`,
+        }}
         aria-hidden="true"
       />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-[#101f39]/95 via-[#172d4d]/80 to-[#19345a]/55" aria-hidden="true" />
@@ -30,7 +33,7 @@ export default function Hero() {
         <div className="hero-reveal [animation-delay:360ms] flex items-center gap-[25px] max-[680px]:gap-[17px]">
           <Link
             className="inline-flex min-h-12 items-center justify-center gap-6 rounded-[3px] bg-white px-5 text-[12px] font-bold text-brand-deep shadow-[0_8px_28px_#09172e55] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_32px_#09172e66] max-[680px]:min-h-11 max-[680px]:gap-[14px] max-[680px]:px-[14px] max-[680px]:text-[10px]"
-            to="#contact"
+            to="/#contact"
           >
             Start your journey <span className="text-[17px]" aria-hidden="true">→</span>
           </Link>
@@ -56,8 +59,8 @@ export default function Hero() {
       <div className="relative z-[1] justify-self-end h-[390px] w-full max-w-[510px] hero-float max-[900px]:h-[340px] max-[680px]:mt-[22px] max-[680px]:h-[320px] max-[680px]:self-center">
         <div className="absolute top-[14px] right-[7px] h-[91%] w-[78%] rotate-[5deg] rounded-[48%_48%_10px_10px] bg-brand-orange max-[680px]:top-[15px] max-[680px]:right-[10%] max-[680px]:h-[88%] max-[680px]:w-[75%]" />
         <img
-          className="absolute right-9 h-full w-[86%] rounded-[48%_48%_8px_8px] object-cover object-[center_35%] max-[900px]:right-5 max-[900px]:w-[90%] max-[680px]:right-[12%] max-[680px]:w-[80%] max-[680px]:object-[center_38%]"
-          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85"
+          className="zigzag-float absolute right-9 h-full w-[86%] rounded-[48%_48%_8px_8px] object-cover object-[center_35%] max-[900px]:right-5 max-[900px]:w-[90%] max-[680px]:right-[12%] max-[680px]:w-[80%] max-[680px]:object-[center_38%]"
+          src={`${import.meta.env.BASE_URL}images/hero-students.jpg`}
           alt="University students sharing ideas on campus"
         />
         <div className="absolute bottom-[25px] left-[-20px] flex items-center gap-[10px] rounded border border-white/60 bg-white/90 px-4 py-3 text-[10px] leading-[1.5] text-brand-navy shadow-[0_10px_35px_#183a8a33] backdrop-blur-md max-[680px]:bottom-[15px] max-[680px]:left-0 max-[680px]:px-3 max-[680px]:py-[10px] max-[680px]:text-[9px]">

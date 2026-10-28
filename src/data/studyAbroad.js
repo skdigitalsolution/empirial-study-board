@@ -3,8 +3,7 @@ export const destinations = [
     country: "United Kingdom",
     slug: "uk",
     region: "Europe",
-    image:
-      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1100&q=85",
+    image: `${import.meta.env.BASE_URL}destination-backgrounds/uk.jpg`,
     alt: "London city skyline at sunset",
     featured: true,
   },
@@ -12,24 +11,21 @@ export const destinations = [
     country: "Canada",
     slug: "canada",
     region: "North America",
-    image:
-      "https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=900&q=85",
+    image: `${import.meta.env.BASE_URL}destination-backgrounds/canada.jpg`,
     alt: "Toronto skyline in Canada",
   },
   {
     country: "Australia",
     slug: "australia",
     region: "Oceania",
-    image:
-      "https://images.unsplash.com/photo-1506973035872-a4ecef7b8e4e?auto=format&fit=crop&w=900&q=85",
+    image: `${import.meta.env.BASE_URL}destination-backgrounds/australia.jpg`,
     alt: "Sydney harbour and Opera House",
   },
   {
     country: "Ireland",
     slug: "ireland",
     region: "Europe",
-    image:
-      "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=900&q=85",
+    image: `${import.meta.env.BASE_URL}destination-backgrounds/ireland.jpg`,
     alt: "A street in Dublin, Ireland",
   },
 ];

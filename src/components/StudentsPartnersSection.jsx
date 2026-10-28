@@ -176,7 +176,7 @@
 //               description="Work with our team and state-of-the-art technology and experience how they can be a game changer for your business"
 //               offerings={[
 //                 "Innovative technology customized for your business",
-//                 "Webinars by University Delegates and KC Experts",
+//                 "Webinars with university representatives and our advisers",
 //                 "Unparalleled end-to-end support",
 //               ]}
 //               href="#partners"
@@ -261,7 +261,7 @@ export default function StudentsPartnersSection() {
               </li>
             </ul>
 
-            <Link to="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
+            <Link to="/services/for-student" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
               See More <FaChevronRight className="text-xs" />
             </Link>
           </div>
@@ -334,7 +334,7 @@ export default function StudentsPartnersSection() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow">
                   <FaStar className="text-[#F59E3F]" />
                 </span>
-                Webinars by University Delegates and KC Experts
+                Webinars with university representatives and our advisers
               </li>
               <li className="flex items-center gap-4">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow">
@@ -344,7 +344,7 @@ export default function StudentsPartnersSection() {
               </li>
             </ul>
 
-            <Link to="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
+            <Link to="/contact-us" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
               See More <FaChevronRight className="text-xs" />
             </Link>
           </div>
@@ -383,11 +383,11 @@ export default function StudentsPartnersSection() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow">
                   <FaStar className="text-[#F59E3F]" />
                 </span>
-                Access to KCs rich Knowledge Repository
+                Access to Empirial Study Abroad’s study resources
               </li>
             </ul>
 
-            <Link to="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
+            <Link to="/contact-us" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
               See More <FaChevronRight className="text-xs" />
             </Link>
           </div>
@@ -458,7 +458,7 @@ export default function StudentsPartnersSection() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow">
                   <FaStar className="text-[#F59E3F]" />
                 </span>
-                Access to KC’s extensive recruitment network
+                Access to Empirial Study Abroad’s university network
               </li>
               <li className="flex items-center gap-4">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow">
@@ -468,7 +468,7 @@ export default function StudentsPartnersSection() {
               </li>
             </ul>
 
-            <Link to="#" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
+            <Link to="/contact-us" className="mt-8 inline-flex items-center gap-2 text-[#F26B4E] hover:underline">
               See More <FaChevronRight className="text-xs" />
             </Link>
           </div>

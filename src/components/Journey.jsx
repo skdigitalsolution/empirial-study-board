@@ -10,8 +10,8 @@ export default function Journey() {
     >
       <div className="relative min-h-[475px] max-[680px]:min-h-[310px] max-[680px]:mr-[10px]">
         <img
-          className="h-[475px] w-full object-cover max-[680px]:h-[310px]"
-          src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1100&q=85"
+          className="zigzag-float h-[475px] w-full object-cover max-[680px]:h-[310px]"
+          src={`${import.meta.env.BASE_URL}images/journey-campus.jpg`}
           alt="Students walking together on a university campus"
           loading="lazy"
         />
@@ -44,7 +44,7 @@ export default function Journey() {
             </li>
           ))}
         </ol>
-        <Link className="inline-flex min-h-12 items-center justify-center gap-6 rounded-[3px] bg-brand-blue px-5 text-[12px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-brand-deep max-[680px]:min-h-11 max-[680px]:gap-[14px] max-[680px]:px-[14px] max-[680px]:text-[10px]" to="#contact">
+        <Link className="inline-flex min-h-12 items-center justify-center gap-6 rounded-[3px] bg-brand-blue px-5 text-[12px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-brand-deep max-[680px]:min-h-11 max-[680px]:gap-[14px] max-[680px]:px-[14px] max-[680px]:text-[10px]" to="/#contact">
           Let’s make a plan <span className="text-[17px]" aria-hidden="true">→</span>
         </Link>
       </div>

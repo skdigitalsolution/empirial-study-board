@@ -36,7 +36,7 @@ const menus = [
       ["Allied Services", "/services/allied-services"],
     ],
   },
-  { label: "Contact Us", href: "/contact-us/" },
+  { label: "Contact Us", href: "/contact-us" },
   {
     label: "Company",
     links: [
@@ -62,6 +62,8 @@ const dropHeadingStyle =
 export default function SiteHeader() {
   const [open, setOpen] = useState(null); // kaunsa dropdown khula hai
   const [mobile, setMobile] = useState(false); // mobile menu khula hai ya nahi
+  const [counsellingOpen, setCounsellingOpen] = useState(false);
+  const [counsellingSubmitted, setCounsellingSubmitted] = useState(false);
   const navRef = useRef(null);
 
   // Navbar ke BAHAR click karne par dropdown aur mobile menu dono band ho jayein.
@@ -77,6 +79,7 @@ export default function SiteHeader() {
     // Esc dabane par bhi sab band
     const handleEsc = (e) => {
       if (e.key === "Escape") {
+        setCounsellingOpen(false);
         setOpen(null);
         setMobile(false);
       }
@@ -108,7 +111,7 @@ export default function SiteHeader() {
             className="h-14 w-14 rounded-full object-cover"
           />
           <span className="font-bold uppercase text-white">
-            imperial study
+            Empirial
             <span className="block tracking-widest">Study Abroad</span>
           </span>
         </Link>
@@ -164,16 +167,9 @@ export default function SiteHeader() {
                       {menu.links.map(([label, href, flag]) => (
                         <Link key={label} to={href} onClick={closeAll} className={dropLinkStyle}>
                           {/* Flag ya icon (sirf jahan flag diya hai) */}
-                          {flag === "asia" ? (
+                          {flag ? (
                             <img
-                              src="https://assets.studies-overseas.com/Group_1_867b98a2d8.svg"
-                              alt=""
-                              className="h-4 w-6 shrink-0 rounded-sm object-cover"
-                              loading="lazy"
-                            />
-                          ) : flag ? (
-                            <img
-                              src={`https://flagcdn.com/w40/${flag}.png`}
+                              src={`${import.meta.env.BASE_URL}flags/${flag === "asia" ? "asia.svg" : `${flag}.png`}`}
                               alt=""
                               className="h-4 w-6 shrink-0 rounded-sm object-cover shadow-sm"
                             />
@@ -195,26 +191,143 @@ export default function SiteHeader() {
 
           {/* ---------- Buttons ---------- */}
           <div className="flex flex-col gap-3 pt-3 lg:ml-4 lg:flex-row lg:pt-0">
-            {/* Student Login: orange gradient */}
+            {/* Student support: orange gradient */}
             <Link
-              to="/student-login"
+              to="/services/for-student"
               onClick={closeAll}
               className="rounded-lg bg-gradient-to-r from-[#FFA84A] to-[#FF6B4A] px-5 py-3 text-center text-sm font-bold text-white shadow-lg shadow-orange-500/30 transition hover:brightness-110"
             >
-              Student Login
+              Student Support
             </Link>
 
             {/* Book Online Counselling: white button */}
-            <Link
-              to="/book-counselling"
-              onClick={closeAll}
+            <button
+              type="button"
+              onClick={() => {
+                closeAll();
+                setCounsellingSubmitted(false);
+                setCounsellingOpen(true);
+              }}
               className="rounded-lg border border-slate-200 bg-white px-5 py-3 text-center text-sm font-bold text-[#F26B4E] transition hover:bg-orange-50 lg:border-0"
             >
               Book Online Counselling
-            </Link>
+            </button>
           </div>
         </div>
       </nav>
+
+      {counsellingOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-slate-950/65 px-4 py-6 backdrop-blur-sm"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) {
+              setCounsellingOpen(false);
+            }
+          }}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="counselling-dialog-title"
+            className="relative my-auto w-full max-w-lg rounded-2xl bg-white p-6 text-slate-800 shadow-2xl sm:p-8"
+          >
+            <button
+              type="button"
+              onClick={() => setCounsellingOpen(false)}
+              className="absolute top-4 right-4 grid size-9 place-items-center rounded-full bg-slate-100 text-xl text-slate-600 transition hover:bg-slate-200"
+              aria-label="Close counselling form"
+            >
+              &times;
+            </button>
+            <p className="mb-2 text-xs font-bold tracking-[1.5px] text-[#2868EF] uppercase">
+              Let’s plan your next step
+            </p>
+            <h2
+              id="counselling-dialog-title"
+              className="mb-2 pr-8 text-2xl font-bold text-slate-900"
+            >
+              Book Online Counselling
+            </h2>
+            <p className="mb-6 text-sm leading-6 text-slate-500">
+              Leave your details and tell us how we can help with your study
+              abroad plans.
+            </p>
+            <form
+              className="space-y-4"
+              onSubmit={(event) => {
+                event.preventDefault();
+                setCounsellingSubmitted(true);
+              }}
+            >
+              <div>
+                <label className="mb-1.5 block text-sm font-semibold" htmlFor="counselling-name">
+                  Name
+                </label>
+                <input
+                  className="w-full rounded-lg border border-slate-200 px-3.5 py-3 text-sm outline-none transition focus:border-[#2868EF] focus:ring-2 focus:ring-[#2868EF]/15"
+                  id="counselling-name"
+                  name="name"
+                  type="text"
+                  autoComplete="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div>
+                <label className="mb-1.5 block text-sm font-semibold" htmlFor="counselling-email">
+                  Email
+                </label>
+                <input
+                  className="w-full rounded-lg border border-slate-200 px-3.5 py-3 text-sm outline-none transition focus:border-[#2868EF] focus:ring-2 focus:ring-[#2868EF]/15"
+                  id="counselling-email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div>
+                <label className="mb-1.5 block text-sm font-semibold" htmlFor="counselling-phone">
+                  Phone number
+                </label>
+                <input
+                  className="w-full rounded-lg border border-slate-200 px-3.5 py-3 text-sm outline-none transition focus:border-[#2868EF] focus:ring-2 focus:ring-[#2868EF]/15"
+                  id="counselling-phone"
+                  name="phone"
+                  type="tel"
+                  autoComplete="tel"
+                  placeholder="Your phone number"
+                  required
+                />
+              </div>
+              <div>
+                <label className="mb-1.5 block text-sm font-semibold" htmlFor="counselling-message">
+                  How can we help?
+                </label>
+                <textarea
+                  className="min-h-28 w-full resize-y rounded-lg border border-slate-200 px-3.5 py-3 text-sm outline-none transition focus:border-[#2868EF] focus:ring-2 focus:ring-[#2868EF]/15"
+                  id="counselling-message"
+                  name="message"
+                  placeholder="Tell us about your study abroad plans"
+                  required
+                />
+              </div>
+              <button
+                className="w-full rounded-lg bg-[#2868EF] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-blue-700"
+                type="submit"
+              >
+                Submit counselling request
+              </button>
+              <p className="m-0 text-xs text-slate-500" aria-live="polite">
+                {counsellingSubmitted
+                  ? "Thanks for your interest. This demo form does not send or store your details."
+                  : "This demo form does not send or store your details."}
+              </p>
+            </form>
+          </section>
+        </div>
+      )}
     </header>
   );
 }

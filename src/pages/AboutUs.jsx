@@ -1,29 +1,8 @@
 import React from "react";
 import { FiPhone } from "react-icons/fi";
-import {
-  FaPaperPlane,
-  FaTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-  FaLinkedinIn,
-} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import PageFooter from "../components/PageFooter";
 const MAP_LINK = "https://goo.gl/maps/DFMJp93L47G2";
-const socials = [
-  { icon: FaTwitter, link: "https://twitter.com/iiam_college" },
-  {
-    icon: FaFacebookF,
-    link: "https://www.facebook.com/pages/category/Tutor-Teacher/Indian-Institute-of-Aviation-and-Management-2201949220074162/",
-  },
-  { icon: FaInstagram, link: "https://www.instagram.com/iiamcollege/" },
-  {
-    icon: FaYoutube,
-    link: "https://www.youtube.com/channel/UCJw44R0lnLylCb9naNAsW3g",
-  },
-  { icon: FaLinkedinIn, link: "#" },
-];
 
 const visionMission = [
   {

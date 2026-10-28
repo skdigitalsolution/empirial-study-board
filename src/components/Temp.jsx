@@ -36,16 +36,16 @@ export default function Temp() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white">
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 lg:px-12">
-          <Link to="#home" aria-label="KC Overseas home">
+          <Link to="#home" aria-label="Empirial Study Abroad home">
             <div className="leading-none">
               <span className="text-2xl font-black tracking-tight text-[#143a72]">
-                KC
+                EMPIRIAL
               </span>
               <span className="ml-1 text-2xl font-bold tracking-tight text-[#ef7d22]">
-                OVERSEAS
+                STUDY ABROAD
               </span>
               <p className="mt-1 text-[9px] font-semibold tracking-[0.22em] text-gray-500">
-                EDUCATION
+                YOUR GLOBAL EDUCATION PARTNER
               </p>
             </div>
           </Link>
@@ -64,13 +64,13 @@ export default function Temp() {
               Company
             </Link>
             <Link
-              to="https://www.coursefinder.ai/"
+              to="/contact-us"
               className="hover:text-orange-500"
             >
               For Partners
             </Link>
             <Link
-              to="https://www.studies-overseas.com/"
+              to="/contact-us"
               className="rounded bg-[#ed7d24] px-5 py-3 font-bold text-white transition hover:bg-[#d96814]"
             >
               Book Online Counselling
@@ -112,15 +112,14 @@ export default function Temp() {
         id="home"
         className="relative flex min-h-[580px] items-center justify-center bg-cover bg-center px-5 py-16 sm:min-h-[680px] lg:min-h-[740px]"
         style={{
-          backgroundImage:
-            "linear-gradient(110deg,rgba(9,35,78,.66),rgba(9,35,78,.24)),url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2200&q=90')",
+          backgroundImage: `linear-gradient(110deg,rgba(9,35,78,.66),rgba(9,35,78,.24)),url("${import.meta.env.BASE_URL}images/hero-students.jpg")`,
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a2550]/50 via-transparent to-[#0a2550]/20" />
 
         <div className="relative mx-auto w-full max-w-5xl border border-white/40 bg-white/[0.16] px-6 py-12 text-center shadow-2xl backdrop-blur-xl sm:rounded-2xl sm:px-12 sm:py-16 lg:px-20">
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-white sm:text-sm">
-            KC Overseas Education
+            Empirial Study Abroad
           </p>
 
           <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-6xl lg:text-7xl">
@@ -152,7 +151,7 @@ export default function Temp() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#ed7d24]">
-              KC Overseas Education
+              Empirial Study Abroad
             </p>
             <h2 className="mt-3 text-3xl font-bold text-[#153c73] sm:text-5xl">
               Our Core Strengths
@@ -162,19 +161,19 @@ export default function Temp() {
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                number: "1200+",
-                title: "Global University Tie Ups",
-                text: "Our students aren’t just pursuing their higher education, but their dreams and ambitions in eminent universities across the globe.",
+                number: "8",
+                title: "Study destinations",
+                text: "Explore study options across eight destinations and find a path that fits your goals.",
               },
               {
-                number: "55+",
-                title: "Offices across the Globe",
-                text: "We’re growing, we’re expanding and we’re doing that fast! Join the fastest growing EdTech brand in South and South-East Asia.",
+                number: "1:1",
+                title: "Personal guidance",
+                text: "Get support tailored to your study plans, questions, and preferred destination.",
               },
               {
-                number: "28+",
-                title: "Years of Industry Presence",
-                text: "With over two decades of industry expertise, we know what’s best for you and that makes us really good at what we do!",
+                number: "360°",
+                title: "Journey support",
+                text: "Get guidance through the key steps of planning and preparing to study abroad.",
               },
             ].map((item) => (
               <article
@@ -215,7 +214,7 @@ export default function Temp() {
             {destinations.map((country, index) => (
               <Link
                 key={country}
-                to="https://www.studies-overseas.com/"
+                to={`/study-destinations/${country.toLowerCase().replace(/\s+/g, "-")}`}
                 className="group flex min-h-36 items-end justify-between border border-gray-200 bg-white p-5 transition hover:border-[#ed7d24] hover:shadow-lg sm:min-h-44 sm:p-7"
               >
                 <div>
@@ -256,7 +255,7 @@ export default function Temp() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {studentServices.map((service, index) => (
               <Link
-                to="https://www.studies-overseas.com/"
+                to="/services/for-student"
                 key={service}
                 className="flex items-center gap-4 border border-gray-200 p-5 transition hover:border-[#ed7d24] hover:shadow-md"
               >
@@ -284,7 +283,7 @@ export default function Temp() {
               Stay connected
             </p>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              Stay updated with KC Overseas
+              Stay updated with Empirial Study Abroad
             </h2>
             <p className="mt-4 max-w-lg text-sm leading-7 text-white/75">
               Receive study abroad information, updates and guidance for your
@@ -354,16 +353,14 @@ export default function Temp() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold text-[#153c73]">
-              About KC Overseas
+              About Empirial Study Abroad
             </h2>
             <p className="mt-4 text-sm leading-7 text-gray-600">
-              We are an EdTech brand facilitating international student
-              recruitment by connecting students, recruitment entrepreneurs
-              and global universities through our online platform,
-              coursefinder.ai.
+              Empirial Study Abroad helps students explore international
+              education options and prepare for their next academic step.
             </p>
             <Link
-              to="https://www.studies-overseas.com/"
+              to="/company/about"
               className="mt-5 inline-block text-sm font-bold text-[#ed7d24]"
             >
               Know More →
@@ -372,7 +369,7 @@ export default function Temp() {
 
           <div>
             <h3 className="text-xl font-bold text-[#153c73]">
-              Explore KC Overseas
+              Explore Empirial Study Abroad
             </h3>
             <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-gray-600">
               {[
@@ -385,7 +382,7 @@ export default function Temp() {
               ].map((link) => (
                 <Link
                   key={link}
-                  to="https://www.studies-overseas.com/"
+                  to="/company/about"
                   className="hover:text-[#ed7d24]"
                 >
                   {link} ↗

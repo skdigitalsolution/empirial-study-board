@@ -18,7 +18,7 @@ export default function Counselling() {
         <p className="mx-auto mt-4 max-w-2xl text-base text-blue-100 sm:text-lg">
           Take the best academic decision for your career.
         </p>
-        <Link to="/book-counselling" className="mt-8 inline-block rounded-lg bg-gradient-to-r from-[#FFA84A] to-[#FF6B4A] px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:brightness-110">
+        <Link to="/contact-us" className="mt-8 inline-block rounded-lg bg-gradient-to-r from-[#FFA84A] to-[#FF6B4A] px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:brightness-110">
           Get Free Online Counselling
         </Link>
       </section>

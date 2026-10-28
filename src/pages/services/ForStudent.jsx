@@ -106,7 +106,7 @@ export default function ForStudent() {
         </Link>
       </section>
 
-      {/* ===== WHY IMPERIAL INSTITUTE ===== */}
+      {/* ===== WHY EMPIRIAL STUDY ABROAD ===== */}
       <section className="bg-slate-50 px-6 py-14">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-2xl font-bold text-[#0F1B2D] sm:text-3xl">Why Empirial Study Abroad?</h2>

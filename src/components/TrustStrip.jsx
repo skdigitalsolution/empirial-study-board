@@ -1,9 +1,10 @@
 import React from "react";
 
 const stats = [
-  ["40+", "study destinations"],
-  ["1,000s", "of courses to explore"],
-  ["1:1", "personal guidance"],
+  ["530,000+", "students assisted so far"],
+  ["47+", "countries"],
+  ["28+", "years of experience"],
+  ["1,200+", "universities"],
 ];
 
 export default function TrustStrip() {

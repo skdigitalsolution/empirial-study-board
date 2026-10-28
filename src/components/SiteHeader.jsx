@@ -1,153 +1,13 @@
 
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-
-// const menus = [
-//   {
-//     label: "Study Destinations",
-//     links: [
-//       ["Study in USA", "/study-destinations/usa"],
-//       ["Study in Canada", "/study-destinations/canada"],
-//       ["Study in United Kingdom", "/study-destinations/uk"],
-//       ["Study in Ireland", "/study-destinations/ireland"],
-//       ["Study in Australia", "/study-destinations/australia"],
-//       ["Study in New Zealand", "/study-destinations/new-zealand"],
-//       ["Study in Europe", "/study-destinations/europe"],
-//       ["Study in Asia", "/study-destinations/asia"],
-//     ],
-//   },
-//   {
-//     label: "Services",
-//     links: [
-//       ["Career Counselling", "/services/counselling"],
-//       ["University Selection", "/services/university-selection"],
-//       ["Visa Guidance", "/services/visa"],
-//       ["Scholarships", "/services/scholarships"],
-//     ],
-//   },
-//   {
-//     label: "Company",
-//     links: [
-//       ["About Us", "/company/about"],
-//       ["Our Team", "/company/team"],
-//       ["Careers", "/company/careers"],
-//     ],
-//   },
-// ];
-
-// export default function SiteHeader() {
-//   const [open, setOpen] = useState(null);
-//   const [mobile, setMobile] = useState(false);
-
-//   const linkStyle =
-//     "block rounded-lg px-4 py-3 ml-2 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-orange-600";
-
-//   return (
-//     <header className="sticky top-0 z-50 bg-slate-300 shadow-md">
-//       <nav className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-4">
-
-//         {/* Logo */}
-//         <Link to="/" className="flex items-center gap-2">
-//           <img
-//             src="logo images/imperier.png"
-//             alt="Logo"
-//             className="h-15 w-15 rounded-full object-cover"
-//           />
-//           <span className="font-bold text-blue-950 uppercase">
-//             imperialstudy
-//             <span className="block tracking-widest">
-//               abroad
-//             </span>
-//           </span>
-//         </Link>
-
-//         {/* Mobile menu button */}
-//         <button
-//           onClick={() => {
-//             setMobile(!mobile);
-//             setOpen(null);
-//           }}
-//           className="text-2xl text-white lg:hidden"
-//           aria-label="Toggle navigation"
-//           aria-expanded={mobile}
-//         >
-//           {mobile ? "✕" : "☰"}
-//         </button>
-
-//         {/* Navigation */}
-//         <div
-//           className={`${mobile ? "flex" : "hidden"} absolute left-0 top-full max-h-[80vh] w-full flex-col overflow-y-auto bg-white p-4 shadow-lg lg:static lg:flex lg:max-h-none lg:w-auto lg:flex-1 lg:flex-row lg:items-center lg:justify-end lg:overflow-visible lg:bg-transparent lg:p-0 lg:shadow-none`}
-//         >
-//           <div className="flex flex-col lg:flex-row lg:items-center">
-//             {menus.map((menu) => (
-//               <div key={menu.label} className="relative cursor-pointer">
-//                 <div className="flex items-center">
-//                   <p className={linkStyle} onClick={() =>
-//                       setOpen(open === menu.label ? null : menu.label)
-//                     }>
-//                     {menu.label}
-//                      {open === menu.label ? "▴" : "▾"}
-//                   </p>
-//                 </div>
-
-//                       {/* Here is study dropdown */}
-
-//                 {open === menu.label && (
-//                   <div className="ml-3 border-l-2 border-orange-400 pl-2 lg:absolute lg:left-0 lg:top-full lg:ml-0 lg:w-56 lg:rounded-lg lg:border-0 lg:bg-white lg:p-2 lg:pl-2 lg:shadow-xl">
-//                     {menu.links.map(([label, href]) => (
-//                       <Link
-//                         key={label}
-//                         to={href}
-//                         onClick={() => {
-//                           setOpen(null);
-//                           setMobile(false);
-//                         }}
-//                         className={linkStyle}
-//                       >
-//                         {label}
-//                       </Link>
-//                     ))}
-//                   </div>
-//                 )}
-//               </div>
-//             ))}
-//             <Link to="/contact" className={linkStyle}>
-//               Contact Us
-//             </Link>
-//           </div>
-
-//           {/* Buttons student Login */}
-//           <div className="flex flex-col gap-2 pt-3 lg:ml-3 lg:flex-row lg:border-0 lg:pt-0">
-//             <Link to="/student-login"   className="rounded-lg bg-blue-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-blue-600">
-//               Student Login
-//             </Link>
-//             <Link
-//               to="/book-counselling"
-//               className="rounded-lg bg-orange-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-orange-600"
-//             >
-//               Book Online Counselling ↗
-//             </Link>
-//           </div>
-//         </div>
-//       </nav>
-//     </header>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaGlobeAsia } from "react-icons/fa";
+import { FiChevronDown } from "react-icons/fi";
 
-// Har link: [naam, path, flag code]
-// Flag code sirf Study Destinations me hai. "globe" ka matlab icon dikhega.
+// Navbar ke items, isi order me dikhenge.
+// links wale items dropdown banenge, jinme links nahi hain wo seedhe link banenge.
+// Har dropdown link: [naam, path, flag code]  ("globe" = icon dikhega)
+// heading: dropdown ke sabse upar ek bold link (jaise "For Student")
 const menus = [
   {
     label: "Study Destinations",
@@ -164,51 +24,97 @@ const menus = [
   },
   {
     label: "Services",
+    heading: ["For Student", "/services/for-student"],
     links: [
-      ["Career Counselling", "/services/counselling"],
-      ["University Selection", "/services/university-selection"],
-      ["Visa Guidance", "/services/visa"],
+      ["Counselling", "/services/counselling"],
+      ["Test Preparation", "/services/test-preparation"],
+      ["Country & University Selection", "/services/university-selection"],
+      ["Applications & Admission", "/services/applications-admission"],
       ["Scholarships", "/services/scholarships"],
+      ["Internship", "/services/internship"],
+      ["Education Loan", "/services/education-loan"],
+      ["Visa Processing", "/services/visa"],
+      ["Allied Services", "/services/allied-services"],
     ],
   },
+  { label: "Contact Us", href: "/contact-us/" },
   {
     label: "Company",
     links: [
       ["About Us", "/company/about"],
-      ["Our Team", "/company/team"],
       ["Careers", "/company/careers"],
     ],
   },
 ];
 
-export default function SiteHeader() {
-  const [open, setOpen] = useState(null);
-  const [mobile, setMobile] = useState(false);
+// ---------- Styles (baar-baar likhna na pade) ----------
+// Navbar ke upar ke items: mobile par dark text (white panel), desktop par white text (blue bar)
+const topLinkStyle =
+  "flex w-full items-center gap-1 rounded-lg px-3 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100 lg:w-auto lg:text-white lg:hover:bg-white/15";
 
-  // NOTE: yahan se "block" hata diya hai, taaki dropdown links flex ban sakein
-  const linkStyle =
-    "rounded-lg px-4 py-3 ml-2 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-orange-600";
+// Dropdown ke andar ke links
+const dropLinkStyle =
+  "flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-blue-50 hover:text-blue-600";
+
+// Dropdown ke upar ki heading (jaise "For Student")
+const dropHeadingStyle =
+  "mb-1 block rounded-lg border-b border-slate-200 px-4 py-2.5 text-sm font-bold text-blue-700 transition hover:bg-blue-50";
+
+export default function SiteHeader() {
+  const [open, setOpen] = useState(null); // kaunsa dropdown khula hai
+  const [mobile, setMobile] = useState(false); // mobile menu khula hai ya nahi
+  const navRef = useRef(null);
+
+  // Navbar ke BAHAR click karne par dropdown aur mobile menu dono band ho jayein.
+  // Navbar ke andar click karne par kuch nahi hoga.
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpen(null);
+        setMobile(false);
+      }
+    };
+
+    // Esc dabane par bhi sab band
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        setOpen(null);
+        setMobile(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEsc);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+
+  // Kisi link par click ho to sab band kar do
+  const closeAll = () => {
+    setOpen(null);
+    setMobile(false);
+  };
 
   return (
-    <header className="sticky top-0 z-50 bg-slate-300 shadow-md">
-      <nav className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-4">
+    <header className="sticky top-0 z-50 bg-[#2868EF] shadow-md">
+      <nav ref={navRef} className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-4">
 
-        {/* Logo */}
+        {/* ================= LOGO ================= */}
         <Link to="/" className="flex items-center gap-2">
           <img
             src={`${import.meta.env.BASE_URL}logo images/imperier.png`}
             alt="Logo"
-            className="h-15 w-15 rounded-full object-cover"
+            className="h-14 w-14 rounded-full object-cover"
           />
-          <span className="font-bold text-blue-950 uppercase">
-            imperialstudy
-            <span className="block tracking-widest">
-              abroad
-            </span>
+          <span className="font-bold uppercase text-white">
+            imperial study
+            <span className="block tracking-widest">abroad</span>
           </span>
         </Link>
 
-        {/* Mobile menu button */}
+        {/* ================= MOBILE MENU BUTTON ================= */}
         <button
           onClick={() => {
             setMobile(!mobile);
@@ -221,72 +127,86 @@ export default function SiteHeader() {
           {mobile ? "✕" : "☰"}
         </button>
 
-        {/* Navigation */}
+        {/* ================= NAVIGATION ================= */}
         <div
-          className={`${mobile ? "flex" : "hidden"} absolute left-0 top-full max-h-[80vh] w-full flex-col overflow-y-auto bg-white p-4 shadow-lg lg:static lg:flex lg:max-h-none lg:w-auto lg:flex-1 lg:flex-row lg:items-center lg:justify-end lg:overflow-visible lg:bg-transparent lg:p-0 lg:shadow-none`}
+          className={`${
+            mobile ? "flex" : "hidden"
+          } absolute left-0 top-full max-h-[80vh] w-full flex-col overflow-y-auto bg-white p-4 shadow-lg lg:static lg:flex lg:max-h-none lg:w-auto lg:flex-1 lg:flex-row lg:items-center lg:justify-end lg:overflow-visible lg:bg-transparent lg:p-0 lg:shadow-none`}
         >
+          {/* ---------- Menu items ---------- */}
           <div className="flex flex-col lg:flex-row lg:items-center">
-            {menus.map((menu) => (
-              <div key={menu.label} className="relative cursor-pointer">
-                <div className="flex items-center">
-                  <p
-                    className={`${linkStyle} block`}
-                    onClick={() =>
-                      setOpen(open === menu.label ? null : menu.label)
-                    }
+            {menus.map((menu) =>
+              menu.links ? (
+                /* Dropdown wala item */
+                <div key={menu.label} className="relative">
+                  <button
+                    type="button"
+                    onClick={() => setOpen(open === menu.label ? null : menu.label)}
+                    className={topLinkStyle}
+                    aria-expanded={open === menu.label}
                   >
                     {menu.label}
-                    {open === menu.label ? "▴" : "▾"}
-                  </p>
+                    <FiChevronDown
+                      className={`transition-transform duration-200 ${
+                        open === menu.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {open === menu.label && (
+                    <div className="ml-3 border-l-2 border-orange-400 pl-2 lg:absolute lg:left-0 lg:top-full lg:ml-0 lg:mt-1 lg:max-h-[75vh] lg:w-72 lg:overflow-y-auto lg:rounded-xl lg:border-0 lg:bg-white lg:p-2 lg:pl-2 lg:shadow-xl">
+                      {/* Upar ki heading (sirf jis menu me di ho, jaise Services me "For Student") */}
+                      {menu.heading && (
+                        <Link to={menu.heading[1]} onClick={closeAll} className={dropHeadingStyle}>
+                          {menu.heading[0]}
+                        </Link>
+                      )}
+
+                      {menu.links.map(([label, href, flag]) => (
+                        <Link key={label} to={href} onClick={closeAll} className={dropLinkStyle}>
+                          {/* Flag ya icon (sirf jahan flag diya hai) */}
+                          {flag === "globe" ? (
+                            <FaGlobeAsia className="h-4 w-6 shrink-0 text-blue-600" />
+                          ) : flag ? (
+                            <img
+                              src={`https://flagcdn.com/w40/${flag}.png`}
+                              alt=""
+                              className="h-4 w-6 shrink-0 rounded-sm object-cover shadow-sm"
+                            />
+                          ) : null}
+                          {label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
-
-                {/* Here is study dropdown */}
-
-                {open === menu.label && (
-                  <div className="ml-3 border-l-2 border-orange-400 pl-2 lg:absolute lg:left-0 lg:top-full lg:ml-0 lg:w-64 lg:rounded-lg lg:border-0 lg:bg-white lg:p-2 lg:pl-2 lg:shadow-xl">
-                    {menu.links.map(([label, href, flag]) => (
-                      <Link
-                        key={label}
-                        to={href}
-                        onClick={() => {
-                          setOpen(null);
-                          setMobile(false);
-                        }}
-                        className={`${linkStyle} flex items-center gap-3`}
-                      >
-                        {/* Flag ya icon (sirf jahan flag diya hai) */}
-                        {flag === "globe" ? (
-                          <FaGlobeAsia className="h-4 w-6 shrink-0 text-blue-600" />
-                        ) : flag ? (
-                          <img
-                            src={`https://flagcdn.com/w40/${flag}.png`}
-                            alt=""
-                            className="h-4 w-6 shrink-0 rounded-sm object-cover shadow-sm"
-                          />
-                        ) : null}
-
-                        {label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <Link to="/contact-us/" className={`${linkStyle} block`}>
-              Contact Us
-            </Link>
+              ) : (
+                /* Seedha link (Contact Us) */
+                <Link key={menu.label} to={menu.href} onClick={closeAll} className={topLinkStyle}>
+                  {menu.label}
+                </Link>
+              )
+            )}
           </div>
 
-          {/* Buttons student Login */}
-          <div className="flex flex-col gap-2 pt-3 lg:ml-3 lg:flex-row lg:border-0 lg:pt-0">
-            <Link to="/student-login" className="rounded-lg bg-blue-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-blue-600">
+          {/* ---------- Buttons ---------- */}
+          <div className="flex flex-col gap-3 pt-3 lg:ml-4 lg:flex-row lg:pt-0">
+            {/* Student Login: orange gradient */}
+            <Link
+              to="/student-login"
+              onClick={closeAll}
+              className="rounded-lg bg-gradient-to-r from-[#FFA84A] to-[#FF6B4A] px-5 py-3 text-center text-sm font-bold text-white shadow-lg shadow-orange-500/30 transition hover:brightness-110"
+            >
               Student Login
             </Link>
+
+            {/* Book Online Counselling: white button */}
             <Link
               to="/book-counselling"
-              className="rounded-lg bg-orange-500 px-4 py-3 text-center text-sm font-bold text-white hover:bg-orange-600"
+              onClick={closeAll}
+              className="rounded-lg border border-slate-200 bg-white px-5 py-3 text-center text-sm font-bold text-[#F26B4E] transition hover:bg-orange-50 lg:border-0"
             >
-              Book Online Counselling ↗
+              Book Online Counselling
             </Link>
           </div>
         </div>

@@ -18,6 +18,18 @@ import StudyInUnitedKingdom from "../studyPage/StudyInUnitedKingdom.jsx";
 import StudentsPartnersSection from "../components/StudentsPartnersSection.jsx";
 import ContactUs from "../pages/ContactUs.jsx";
 import AboutUs from "../pages/AboutUs.jsx";
+import Career from "../pages/Career.jsx";
+import ForStudent from "../pages/services/ForStudent.jsx";
+import Counselling from "../pages/services/Counselling.jsx";
+import TestPreparation from "../pages/services/TestPreparation.jsx";
+import UniversitySelection from "../pages/services/UniversitySelection.jsx";
+import ApplicationsAdmission from "../pages/services/ApplicationsAdmission.jsx";
+import Scholarships from "../pages/services/Scholarships.jsx";
+import Internship from "../pages/services/Internship.jsx";
+import EducationLoan from "../pages/services/EducationLoan.jsx";
+import Visa from "../pages/services/Visa.jsx";
+import AlliedServices from "../pages/services/AlliedServices.jsx";
+
 
 function HomePage() {
   return (
@@ -42,12 +54,46 @@ export default function AppRoutes() {
       <Route path="/study-destinations/canada" element={<StudyInCanada />} />
       <Route path="/study-destinations/uk" element={<StudyInUnitedKingdom />} />
       <Route path="/study-destinations/ireland" element={<StudyInIreland />} />
-      <Route path="/study-destinations/australia" element={<StudyInAustralia />} />
-      <Route path="/study-destinations/new-zealand" element={<StudyInNewZealand />} />
+      <Route
+        path="/study-destinations/australia"
+        element={<StudyInAustralia />}
+      />
+      <Route
+        path="/study-destinations/new-zealand"
+        element={<StudyInNewZealand />}
+      />
       <Route path="/study-destinations/europe" element={<StudyInEurope />} />
       <Route path="/study-destinations/asia" element={<StudyInAsia />} />
-      <Route path="/contact-us" element={<ContactUs/>} />
-      <Route path="/company/about" element={<AboutUs/>} />
+      <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/company/about" element={<AboutUs />} />
+      <Route path="/company/careers" element={<Career />} />
+
+
+
+
+
+
+
+
+
+
+      <Route path="/services/for-student" element={<ForStudent/>} />
+      <Route path="/services/counselling" element={<Counselling />} />
+      <Route path="/services/test-preparation" element={<TestPreparation />} />
+      <Route
+        path="/services/university-selection"
+        element={<UniversitySelection />}
+      />
+      <Route
+        path="/services/applications-admission"
+        element={<ApplicationsAdmission />}
+      />
+      <Route path="/services/scholarships" element={<Scholarships />} />
+      <Route path="/services/internship" element={<Internship />} />
+      <Route path="/services/education-loan" element={<EducationLoan />} />
+      <Route path="/services/visa" element={<Visa />} />
+      <Route path="/services/allied-services" element={<AlliedServices />} />
+
       <Route path="*" element={<HomePage />} />
     </Routes>
   );

@@ -45,7 +45,7 @@ const PageFooter = () => {
               />
 
               <p className="mt-4 text-[15px] leading-[29px] text-black">
-                Imperial Institute of Advanced Management
+                Empirial Study Abroad
                 <br />
                 Admin Building, Ideal College Campus,
                 <br />
@@ -90,7 +90,7 @@ const PageFooter = () => {
             <div className="lg:col-span-8">
               <img
                 src={`${import.meta.env.BASE_URL}Contact-us-college.jpg`}
-                alt="IIAM Campus"
+                alt="Empirial Study Abroad"
                 className="mx-auto w-full max-w-[606px] border-[3px] border-white"
               />
               <div className="mx-auto mt-4 flex max-w-[606px] justify-around">
@@ -113,7 +113,7 @@ const PageFooter = () => {
 
         {/* Copyright bar */}
         <div className="bg-black px-4 py-1.5 text-center text-sm text-white">
-          Imperial Institute of Advanced Management ©2026 All rights reserved.
+          Empirial Study Abroad ©2026 All rights reserved.
           Website Designed and Developed by MAsys
         </div>
       </footer>

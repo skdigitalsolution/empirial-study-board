@@ -27,7 +27,7 @@ export default function Counselling() {
       <section className="px-6 py-14">
         <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-bold text-[#0F1B2D] sm:text-3xl">Counselling with Imperial Institute</h2>
+            <h2 className="text-2xl font-bold text-[#0F1B2D] sm:text-3xl">Counselling with Empirial Study Abroad</h2>
             <p className="mt-4 text-base leading-8 text-slate-600">
               Our counselling sessions help you take the best academic decision for your career choices. Meet our
               experts in person or online and understand which country, course and university suit you most.
@@ -53,7 +53,7 @@ export default function Counselling() {
 
       {/* ===== CTA ===== */}
       <section className="bg-[#2868EF] px-6 py-14 text-center text-white">
-        <h2 className="text-2xl font-bold sm:text-3xl">Start your study abroad journey with Imperial Institute</h2>
+        <h2 className="text-2xl font-bold sm:text-3xl">Start your study abroad journey with Empirial Study Abroad</h2>
         <p className="mx-auto mt-3 max-w-xl text-blue-100">Book a free in-person or online counselling session with our experts.</p>
         <Link to="/contact-us" className="mt-6 inline-block rounded-lg bg-white px-7 py-3 text-sm font-bold text-[#F26B4E] hover:bg-orange-50">
           Contact Us

@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { FaGlobeAsia } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 
 // Navbar ke items, isi order me dikhenge.
@@ -19,7 +18,7 @@ const menus = [
       ["Study in Australia", "/study-destinations/australia", "au"],
       ["Study in New Zealand", "/study-destinations/new-zealand", "nz"],
       ["Study in Europe", "/study-destinations/europe", "eu"],
-      ["Study in Asia", "/study-destinations/asia", "globe"],
+      ["Study in Asia", "/study-destinations/asia", "asia"],
     ],
   },
   {
@@ -110,7 +109,7 @@ export default function SiteHeader() {
           />
           <span className="font-bold uppercase text-white">
             imperial study
-            <span className="block tracking-widest">abroad</span>
+            <span className="block tracking-widest">Study Abroad</span>
           </span>
         </Link>
 
@@ -165,8 +164,13 @@ export default function SiteHeader() {
                       {menu.links.map(([label, href, flag]) => (
                         <Link key={label} to={href} onClick={closeAll} className={dropLinkStyle}>
                           {/* Flag ya icon (sirf jahan flag diya hai) */}
-                          {flag === "globe" ? (
-                            <FaGlobeAsia className="h-4 w-6 shrink-0 text-blue-600" />
+                          {flag === "asia" ? (
+                            <img
+                              src="https://assets.studies-overseas.com/Group_1_867b98a2d8.svg"
+                              alt=""
+                              className="h-4 w-6 shrink-0 rounded-sm object-cover"
+                              loading="lazy"
+                            />
                           ) : flag ? (
                             <img
                               src={`https://flagcdn.com/w40/${flag}.png`}

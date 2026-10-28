@@ -54,7 +54,7 @@ export default function TestPreparation() {
       {/* ===== HERO ===== */}
       <section className="bg-gradient-to-br from-[#2868EF] to-[#1b4bb8] px-6 py-16 text-center text-white sm:py-24">
         <h1 className="mx-auto max-w-3xl text-3xl font-bold sm:text-5xl">
-          Imperial Academy: the smartest way to reach your top test score
+          Empirial Study Abroad: the smartest way to reach your top test score
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-blue-100 sm:text-lg">
           Prepare with us and get the test scores you need to land in your dream university.
@@ -68,9 +68,9 @@ export default function TestPreparation() {
       <section className="px-6 py-14">
         <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-bold text-[#0F1B2D] sm:text-3xl">Imperial Academy: the academy of top scorers</h2>
+            <h2 className="text-2xl font-bold text-[#0F1B2D] sm:text-3xl">Empirial Study Abroad: the academy of top scorers</h2>
             <p className="mt-4 text-base leading-8 text-slate-600">
-              Imperial Academy is a team of motivated and skilled tutors who help ambitious test takers reach their
+              Empirial Study Abroad helps ambitious test takers reach their
               target scores. Our teaching methods are effective yet easy, interactive and fun, so you can get the
               score you are aiming for without stress.
             </p>
@@ -117,7 +117,7 @@ export default function TestPreparation() {
 
       {/* ===== CTA ===== */}
       <section className="bg-[#2868EF] px-6 py-14 text-center text-white">
-        <h2 className="text-2xl font-bold sm:text-3xl">Start your study abroad journey with Imperial Institute</h2>
+        <h2 className="text-2xl font-bold sm:text-3xl">Start your study abroad journey with Empirial Study Abroad</h2>
         <p className="mx-auto mt-3 max-w-xl text-blue-100">Book a free in-person or online counselling session with our experts.</p>
         <Link to="/contact-us" className="mt-6 inline-block rounded-lg bg-white px-7 py-3 text-sm font-bold text-[#F26B4E] hover:bg-orange-50">
           Contact Us

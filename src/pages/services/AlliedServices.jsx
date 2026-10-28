@@ -33,7 +33,7 @@ export default function AlliedServices() {
       <section className="px-6 py-14">
         <div className="mx-auto max-w-6xl">
           <p className="mx-auto max-w-3xl text-center text-base leading-8 text-slate-600">
-            Allied services help international students settle in smoothly. Imperial Institute brings them together
+            Allied services help international students settle in smoothly. Empirial Study Abroad brings them together
             so you can arrange everything you need before you travel.
           </p>
 
@@ -53,7 +53,7 @@ export default function AlliedServices() {
 
       {/* ===== CTA ===== */}
       <section className="bg-[#2868EF] px-6 py-14 text-center text-white">
-        <h2 className="text-2xl font-bold sm:text-3xl">Need guidance? Let Imperial Institute help you.</h2>
+        <h2 className="text-2xl font-bold sm:text-3xl">Need guidance? Let Empirial Study Abroad help you.</h2>
         <Link to="/contact-us" className="mt-6 inline-block rounded-lg bg-white px-7 py-3 text-sm font-bold text-[#F26B4E] hover:bg-orange-50">
           Contact Us
         </Link>

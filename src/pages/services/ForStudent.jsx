@@ -99,7 +99,7 @@ export default function ForStudent() {
           Study at the global university of your choice
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-blue-100 sm:text-lg">
-          Students are building their careers in universities around the world. Imperial Institute helps you start yours.
+          Students are building their careers in universities around the world. Empirial Study Abroad helps you start yours.
         </p>
         <Link to="/contact-us" className="mt-8 inline-block rounded-lg bg-gradient-to-r from-[#FFA84A] to-[#FF6B4A] px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:brightness-110">
           Enquire Now
@@ -109,7 +109,7 @@ export default function ForStudent() {
       {/* ===== WHY IMPERIAL INSTITUTE ===== */}
       <section className="bg-slate-50 px-6 py-14">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-2xl font-bold text-[#0F1B2D] sm:text-3xl">Why Imperial Institute?</h2>
+          <h2 className="text-center text-2xl font-bold text-[#0F1B2D] sm:text-3xl">Why Empirial Study Abroad?</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {whyPoints.map((item) => (
               <div key={item.title} className="rounded-2xl bg-white p-6 shadow-md">
@@ -198,7 +198,7 @@ export default function ForStudent() {
 
       {/* ===== CTA ===== */}
       <section className="bg-[#2868EF] px-6 py-14 text-center text-white">
-        <h2 className="text-2xl font-bold sm:text-3xl">Start your study abroad journey with Imperial Institute</h2>
+        <h2 className="text-2xl font-bold sm:text-3xl">Start your study abroad journey with Empirial Study Abroad</h2>
         <p className="mx-auto mt-3 max-w-xl text-blue-100">Book a free in-person or online counselling session with our experts.</p>
         <Link to="/contact-us" className="mt-6 inline-block rounded-lg bg-white px-7 py-3 text-sm font-bold text-[#F26B4E] hover:bg-orange-50">
           Contact Us

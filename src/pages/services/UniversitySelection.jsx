@@ -19,7 +19,7 @@ const universities = [];
 const faqs = [
   {
     q: "How do I choose the right university abroad?",
-    a: "It depends on your preferred course, budget, location and career goals. Imperial Institute helps you research universities, compare programmes, understand admission requirements and narrow down the options that fit you.",
+    a: "It depends on your preferred course, budget, location and career goals. Empirial Study Abroad helps you research universities, compare programmes, understand admission requirements and narrow down the options that fit you.",
   },
   {
     q: "What are the top countries for studying abroad?",

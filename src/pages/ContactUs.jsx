@@ -88,8 +88,8 @@ export default function ContactUs() {
       {/* ================= MAP ================= */}
       <div className="mx-auto max-w-[1200px] px-4 pt-6">
         <iframe
-          title="IIAM Location"
-          src="https://www.google.com/maps?q=Imperial+Institute+of+Advanced+Management+Kalyan&output=embed"
+          title="Empirial Study Abroad Location"
+          src="https://www.google.com/maps?q=Empirial+Study+Abroad&output=embed"
           className="h-[300px] w-full border-0 sm:h-[360px]"
           loading="lazy"
         />
@@ -228,7 +228,7 @@ export default function ContactUs() {
                 <SlHome className="mt-1 h-7 w-7 shrink-0 text-gray-500" />
                 <div>
                   <p className="font-['Josefin_Sans'] text-[15px] font-semibold leading-snug text-gray-900">
-                    Imperial Institute of Advanced Management
+                    Empirial Study Abroad
                   </p>
                   <p className="text-[15px] leading-[30px] text-gray-500">
                     Admin Building, Ideal College Campus, Bhal Malang Road

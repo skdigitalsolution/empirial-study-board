@@ -318,7 +318,7 @@ export default function Career() {
               <div className="px-6 py-10 text-center">
                 <p className="text-lg font-semibold text-green-700">Thank you!</p>
                 <p className="mt-2 text-gray-600">
-                  Aapka resume Imperial Institute ko mil gaya hai. Hamari team jaldi hi sampark karegi.
+                  Aapka resume Empirial Study Abroad ko mil gaya hai. Hamari team jaldi hi sampark karegi.
                 </p>
                 <button onClick={() => setModalOpen(false)} className={`${blueButton} mt-6`}>
                   Close

@@ -100,7 +100,7 @@ export default function SiteHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#2868EF] shadow-md">
+    <header className="site-header sticky top-0 z-50 bg-[#2868EF] shadow-md">
       <nav ref={navRef} className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-4">
 
         {/* ================= LOGO ================= */}

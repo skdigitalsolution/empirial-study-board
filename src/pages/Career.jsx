@@ -221,6 +221,19 @@ export default function Career() {
 
   return (
     <main className="font-['Mulish'] px-4 py-10">
+      <header className="mx-auto mb-8 max-w-[1100px] text-center">
+        <p className="mb-3 text-xs font-bold tracking-[.2em] text-brand-blue uppercase">
+          Careers at Empirial
+        </p>
+        <h1 className="font-display text-3xl font-bold text-brand-navy sm:text-5xl">
+          Build your future with us
+        </h1>
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
+          Explore our open roles and find an opportunity to grow with a team
+          that helps students take their next big step.
+        </p>
+      </header>
+
       {/* ================= JOBS ACCORDION ================= */}
       <div className="mx-auto max-w-[1100px] bg-white shadow-[0_3px_8px_rgba(0,0,0,0.5)]">
         {jobs.map((job, index) => {

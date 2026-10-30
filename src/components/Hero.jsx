@@ -56,20 +56,42 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="relative z-[1] justify-self-end h-[390px] w-full max-w-[510px] hero-float max-[900px]:h-[340px] max-[680px]:mt-[22px] max-[680px]:h-[320px] max-[680px]:self-center">
-        <div className="absolute top-[14px] right-[7px] h-[91%] w-[78%] rotate-[5deg] rounded-[48%_48%_10px_10px] bg-brand-orange max-[680px]:top-[15px] max-[680px]:right-[10%] max-[680px]:h-[88%] max-[680px]:w-[75%]" />
-        <img
-          className="zigzag-float absolute right-9 h-full w-[86%] rounded-[48%_48%_8px_8px] object-cover object-[center_35%] max-[900px]:right-5 max-[900px]:w-[90%] max-[680px]:right-[12%] max-[680px]:w-[80%] max-[680px]:object-[center_38%]"
-          src={`${import.meta.env.BASE_URL}images/hero-students.jpg`}
-          alt="University students sharing ideas on campus"
-        />
-        <div className="absolute bottom-[25px] left-[-20px] flex items-center gap-[10px] rounded border border-white/60 bg-white/90 px-4 py-3 text-[10px] leading-[1.5] text-brand-navy shadow-[0_10px_35px_#183a8a33] backdrop-blur-md max-[680px]:bottom-[15px] max-[680px]:left-0 max-[680px]:px-3 max-[680px]:py-[10px] max-[680px]:text-[9px]">
-          <span className="text-[23px] text-brand-orange" aria-hidden="true">✦</span>
-          <span><strong className="text-[11px] max-[680px]:text-[10px]">Your future,</strong><br />in a new perspective</span>
+      <div className="hero-float relative z-[1] h-[390px] w-full max-w-[510px] justify-self-end max-[900px]:h-[340px] max-[680px]:mt-[22px] max-[680px]:h-[320px] max-[680px]:self-center">
+        <div className="hero-glow absolute inset-[8%] rounded-[38%] bg-[#70baff]/30 blur-3xl" aria-hidden="true" />
+        <div className="hero-orbit-ring absolute top-[3%] right-[3%] size-[94%] rounded-full border border-white/20" aria-hidden="true" />
+        <div className="absolute top-[7%] right-[8%] h-[82%] w-[84%] rotate-[4deg] rounded-[28px] bg-gradient-to-br from-[#ffd39b] via-brand-orange to-[#ee7044] shadow-[0_28px_70px_#081a3855]" aria-hidden="true" />
+        <div className="absolute top-[4%] right-[11%] h-[84%] w-[84%] -rotate-[3deg] overflow-hidden rounded-[25px] border-[5px] border-white/90 bg-[#9fe3ed] shadow-[0_22px_60px_#081a3855] max-[680px]:right-[9%]">
+          <img
+            className="hero-image-drift size-full object-cover object-[center_35%]"
+            src={`${import.meta.env.BASE_URL}Studentimg.jpg`}
+            alt="A smiling student ready for a new academic journey"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#102344]/65 via-transparent to-white/10" aria-hidden="true" />
+          <div className="absolute right-4 bottom-4 left-4 text-white">
+            <span className="mb-1 block text-[8px] font-bold tracking-[2px] text-white/75 uppercase">Your next chapter</span>
+            <strong className="font-display text-[19px] font-bold tracking-[-.5px] max-[680px]:text-[16px]">A world of possibility.</strong>
+          </div>
         </div>
-        <div className="absolute top-[34px] right-[-4px] grid size-[72px] rotate-[10deg] content-center rounded-full border border-white/75 bg-white/10 text-center font-display text-[16px] leading-none font-bold shadow-[0_8px_24px_#09172e33] backdrop-blur-sm max-[680px]:top-6 max-[680px]:right-[3%] max-[680px]:size-[58px] max-[680px]:text-[13px]">
-          GO<br /><span className="text-[8px] tracking-[1px] max-[680px]:text-[7px]">GLOBAL</span>
+        <svg
+          className="hero-flight-path pointer-events-none absolute top-[5%] right-[4%] h-[78%] w-[86%] overflow-visible"
+          viewBox="0 0 400 320"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="M45 265C115 226 91 143 185 153C274 162 215 54 350 45" stroke="white" strokeOpacity=".8" strokeWidth="2" strokeDasharray="5 8" />
+          <circle cx="45" cy="265" r="5" fill="#FFD39B" />
+          <circle cx="350" cy="45" r="6" fill="#FFD39B" />
+        </svg>
+        <div className="hero-travel-badge absolute top-[18%] right-[-1%] flex items-center gap-2 rounded-full border border-white/70 bg-white/95 px-3 py-2 text-[9px] font-bold text-brand-navy shadow-[0_12px_30px_#09172e33] backdrop-blur-md max-[680px]:right-0">
+          <span className="grid size-7 place-items-center rounded-full bg-[#e9f1ff] text-[15px] text-brand-blue" aria-hidden="true">✈</span>
+          8 destinations
         </div>
+        <div className="hero-float-card absolute bottom-[1%] left-[-2%] flex items-center gap-3 rounded-xl border border-white/80 bg-white/95 px-4 py-3 shadow-[0_16px_40px_#09172e33] backdrop-blur-md max-[680px]:left-0 max-[680px]:px-3">
+          <span className="grid size-9 place-items-center rounded-full bg-[#fff3e5] text-[19px] text-brand-orange" aria-hidden="true">✦</span>
+          <span className="text-[9px] leading-[1.45] text-[#728097]"><strong className="block text-[11px] text-brand-navy">Dream it. We’ll guide you.</strong>Start your journey with confidence</span>
+        </div>
+        <span className="hero-sparkle absolute top-[8%] left-[8%] text-[21px] text-[#ffd39b]" aria-hidden="true">✦</span>
+        <span className="hero-sparkle-delayed absolute right-[4%] bottom-[23%] text-[14px] text-white" aria-hidden="true">✧</span>
       </div>
       <div className="absolute bottom-[26px] left-[7.2%] flex items-center gap-3 text-[9px] tracking-[1px] text-white/65 uppercase max-[900px]:left-[5%] max-[680px]:hidden" aria-hidden="true">
         <span>Scroll to explore</span><i className="h-px w-[38px] bg-white/55" />
